@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-const RecipeDetails = ({ ingredients, showInfo, socialRank }) => (
+const RecipeDetails = ({ ingredients, showInfo, social_rank }) => (
   <Fragment>
     {showInfo && (
     <button 
@@ -8,7 +8,7 @@ const RecipeDetails = ({ ingredients, showInfo, socialRank }) => (
     style={{ margin: '13px'}} 
     className='btn btn-success text-center font-weight-bold'
     >
-    Social Rank: {socialRank}
+    Social Rank: {social_rank}
     </button>)
   }
   {showInfo ? ingredients.map((ingredient, ix) => {

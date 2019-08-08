@@ -1,12 +1,11 @@
 import React, { useState, Fragment } from 'react'
 import RecipeDetails from './RecipeDetails'
-import { async } from 'q';
 
 const Recipe = ({ recipe }) => {
   const [showInfo, setShowInfo] = useState(false)
   const [recipeDetails, setRecipeDetails] = useState([])
-  const { imageUrl, publisher, title, recipeId} = recipe
-  const { ingredients, socialRank } = recipeDetails
+  const { image_url, publisher, title, recipe_id} = recipe
+  const { ingredients, social_rank } = recipeDetails
 
   const handleShowInfo = async (event) => {
     try{
@@ -23,7 +22,7 @@ const Recipe = ({ recipe }) => {
     <Fragment>
       <div className="col-10 mx-auto col-md-6 col-lg-4 my-3">
         <div className="card">
-          <img src={imageUrl} alt="recipe" className="img-card-top" style={{ height: "14rem" }} />
+          <img src={image_url} alt="recipe" className="img-card-top" style={{ height: "14rem"}} />
           <div className="card-body text-capitalize">
             <h6>{title}</h6>
             <h6 className="text-warning">
@@ -31,8 +30,8 @@ const Recipe = ({ recipe }) => {
             </h6>
           </div>
           <div className="card-footer">
-            <button type="button" style={{ margin: `13px` }} className="btn btn-primary text-center" data-id={recipeId} onClick={handleShowInfo}>Ingredients</button>
-            <RecipeDetails key={recipeId} ingredients={ingredients} social_rank={socialRank} showInfo={showInfo} />
+            <button type="button" style={{ margin: `13px` }} className="btn btn-primary text-center" data-id={recipe_id} onClick={handleShowInfo}>Ingredients</button>
+            <RecipeDetails key={recipe_id} ingredients={ingredients} social_rank={social_rank} showInfo={showInfo} />
           </div>
         </div>
       </div>

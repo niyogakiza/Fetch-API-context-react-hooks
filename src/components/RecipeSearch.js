@@ -11,7 +11,7 @@ const RecipeSearch = () => {
     <form className='form-inline' onSubmit={event => handleSubmit(event)}>
        <label htmlFor='search'>Search: </label>
        <input data-age='Love' onChange={event => handleSearchChange(event)} type='text' className='form-control' id='search' placeholder='Search recipe' name='search'/>
-       <button type='submit' className='btn btn-primary'><i className='fa fa-search'/></button>
+       <button type='submit' className='btn btn-primary'>Search</button>
     </form>
     </div>
   )

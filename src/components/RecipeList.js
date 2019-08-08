@@ -20,9 +20,9 @@ const RecipeList = () => {
         </div>
 
         <div className="row recipe-list">
-          {recipes.map(recipe => {
+          {recipes.map((recipe, ix) => {
             return <Recipe
-              key={recipe.recipeId} recipe={recipe} />
+              key={ix} recipe={recipe} />
           })}
         </div>
       </div>
