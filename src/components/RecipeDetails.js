@@ -1,0 +1,24 @@
+import React, { Fragment } from 'react'
+
+const RecipeDetails = ({ ingredients, showInfo, socialRank }) => (
+  <Fragment>
+    {showInfo && (
+    <button 
+    type='button' 
+    style={{ margin: '13px'}} 
+    className='btn btn-success text-center font-weight-bold'
+    >
+    Social Rank: {socialRank}
+    </button>)
+  }
+  {showInfo ? ingredients.map((ingredient, ix) => {
+    return (
+      <ul key={ix} className='list-group'>
+      <li className='list-group-item'>{ingredient}</li>
+      </ul>
+    )
+  }): null}
+    </Fragment>
+)
+
+export default RecipeDetails
