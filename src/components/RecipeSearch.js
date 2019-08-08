@@ -8,10 +8,15 @@ const RecipeSearch = () => {
 
   return (
     <div className='container d-flex justify-content-center my-5'>
-    <form className='form-inline' onSubmit={event => handleSubmit(event)}>
-       <label htmlFor='search'>Search: </label>
-       <input data-age='Love' onChange={event => handleSearchChange(event)} type='text' className='form-control' id='search' placeholder='Search recipe' name='search'/>
-       <button type='submit' className='btn btn-primary'>Search</button>
+    <form className='form-inline' onSubmit={event => handleSubmit(event)} >
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search this blog" onChange={event => handleSearchChange(event)}/>
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button">
+          Search
+        </button>
+      </div> 
+    </div>
     </form>
     </div>
   )

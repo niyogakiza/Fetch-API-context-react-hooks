@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
